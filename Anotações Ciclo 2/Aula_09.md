@@ -9,8 +9,8 @@
   
 
   			
-  		x - 1, y + 1        x
-  			           x,y
+  		x - 1, y + 1                  x + 1, y + 1
+  			              x,y
   
         x - 1, y - 1			x + 1, y - 1
 
@@ -43,6 +43,8 @@
 **A conectividade é importante porque é ele que ajuda a definir as bordas, com isso há necessidade de determinar se são adjacentes**
 
 * 4-conectividade: Pertence ao conjunto N4(p), ou seja, os vizinhos verticais.
+* 8-conectividade: Pertence ao conjunto N8(p), ou seja, todos os vizinhos; estes tanto verticais quanto horizontais
+* m-conectividade: 
 
 
 
