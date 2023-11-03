@@ -2,7 +2,7 @@ Pixel *p* que possui coordenadas (x, y):
 
 - Possui 4 vizinhos horizontais:
 
-  $$\ND(p) = \{(x + 1, y + 1), (x - 1, y - 1), (x + 1, y + 1), (x - 1, y - 1)\}$$
+  $$ND(p) = \{(x + 1, y + 1), (x - 1, y - 1), (x + 1, y + 1), (x - 1, y - 1)\}$$
 
 - Possui 4 vizinhos verticais:
 
@@ -10,4 +10,4 @@ Pixel *p* que possui coordenadas (x, y):
 
 - A soma dos conjuntos verticais e horizontais define a 8-vizinhança:
 
-  $$N8(p) = N4(p) + \ND(p)$$
+  $$N8(p) = N4(p) + ND(p)$$
