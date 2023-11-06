@@ -27,3 +27,40 @@ São também conhecidas por processamentos pontuais, ou pixel a pixel, pois elas
 
 Permite entender a distribuição da intensidade/cor e comparar com as distribuições de outras imagens.
 
+
+---
+
+# Filtros de Realce
+
+
+#### Também chamados de **Filtros de Passa-Alta**
+
+
+- O realce chamado *Sharpening* tem como objetivo destacar as transições de uma intensidade na imagem;
+- Utiliza um tipo de máscara que tende a realçar as diferenças de níveis de cinza na imagem.
+
+
+#### Analogias
+
+- Filtro de média (suavização) <-> Integração
+- Realce <-> Derivação
+
+- As derivadas de uma função digital são definidas em termos de diferenças entre os pixels
+
+
+---
+
+- *Derivações* são proporcioanis ao grau de descontinuidade na imagem;
+	- Enfatizam as regições de bordas e os ruídos;
+	- Não enfatizam regiões constantes ou com variações de intensidade suaves.
+	
+- Filtros
+	- Laplaciano;
+	- Unsharp masking e highboost filtering;
+	- Derivativos.
+---
+
+#### Filtro Laplaciano
+
+- Utiliza derivadas de segunda ordem
+	+ Resposta mais acentuada e detalhes finos como pontos isolados e linhas
