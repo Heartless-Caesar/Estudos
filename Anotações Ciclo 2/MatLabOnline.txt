@@ -1,0 +1,96 @@
+close all
+clear
+clc
+f = imread('lua.png');
+fr=f(:,:,1);
+fg=f(:,:,2);
+fb=f(:,:,3);
+figure, imshow(fr);title('Frequencia Vermelha')
+figure, imshow(fg);title('Frequencia Verde')
+figure, imshow(fb);title('Frequencia Azul')
+****
+clear
+clc
+f-imread('lua.png');
+s[1,1,1,1,1,1,1,1,1]/9;
+a=imfilter(f,s);
+imshow(a);
+b=highboost(a);
+**************** **************************************************************
+clear
+f-imread('lua.png');
+w = fspecial('average', [3,3]);
+g1=imfilter(f,w,'replicate');
+imshow(g1,[]);title('Imagem com filtro de média')
+**************
+clear
+clc
+f-imread('lua.png');
+w = fspecial('gaussian', [3,3]);
+g1=imfilter(f,w,'replicate');
+imshow(g1,[]);title('Imagem com filtro Gaussian')
+***
+clear
+clc
+f-imread('lua.png');
+w = fspecial('laplacian',1);
+g1=imfilter(f,w, 'replicate');
+***************************************************************
+imshow(g1,[]);title('Imagem com filtro de Laplacian')
+*****
+********
+************
+close all
+clear
+clc
+*****
+***
+f-imread('lua.png');
+w = fspecial('prewitt');
+g1=imfilter(f,w, 'replicate');
+imshow(g1,[]);title('Imagem com filtro Prewitt');
+***
+*******
+f-imread('lua.png');
+w = fspecial('prewitt');
+g1=imfilter(f,w,'replicate');
+imshow(g1,[]);title('Imagem com filtro Prewitt')
+**************
+f-imread('lua.png');
+f=f(:,:,2);
+BW1 = edge(f, 'prewitt');
+BW2 = edge(f,'roberts');
+BW3 = edge(f,'sobel');
+figure, imshow(BW1)
+figure, imshow(BW2)
+figure, imshow(BWV3)
+close all
+clear
+clc
+***************************************************************
+f-imread('lua.png');
+w = fspecial('sobel');
+g1=imfilter(f,w,'replicate');
+imshow(g1,[]); title('Imagem com filtro Sobel');
+**************
+*******
+function iout-highboost(f)
+imshow(f);title ('Imagem Original')
+%my averaging filter is
+************************************************
+x= [1,1,1,1,1,1,1,1,1]/9;
+% Aplicando o filtro de média a imagem original
+f_blur=imfilter(f,x);
+-
+k=1;
+%Filtro laplaciano
+u= [0,-1,0;-1,k+4,-1;0,-1,0];
+%Aplicando o filtro laplaciano
+f_high imfilter(f,u) + f_blur;
+iout = f_high;
+figure(2);
+imshow(iout);
+title ('Imagem filtrada');
+*********************:
+***
+*****
