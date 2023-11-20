@@ -1,0 +1,50 @@
+Aplicando filtro a uma imagem
+
+f = imread('minha-imagem.jpg')
+
+w = fspecial('gaussian',[4,4])
+
+g1 = imfilter(f,w, 'replicate')
+
+'average','gaussian','prewitt','sobel','laplacian'
+
+--------------------------------------
+
+Separando cores RGB
+
+fr = f(:,:,1);
+fg = f(:,:,2);
+fb = f(:,:,3);
+
+Exibindo cores
+
+figure, imshow(fr); title('Frequencia Vermelha')
+figure, imshow(fg); title('Frequencia Verde')
+figure, imshow(fb); title('Frequencia Azul')
+
+--------------------------------------
+
+Aplicando um filtro Laplaciano
+
+
+w = fspecial('laplacian', 1);
+g1 = imfilter(f, w, 'replicate');
+
+
+--------------------------------------
+
+
+Detecção de bordas
+
+f = f(:,:,2);
+BW1 = edge(f, 'prewitt');
+BW2 = edge(f, 'roberts');
+BW3 = edge(f, 'sobel');
+
+--------------------------------------
+
+Função Highboost
+
+function iout = highboost(f)
+
+Em que f é sua imagem lida pelo Matlab
